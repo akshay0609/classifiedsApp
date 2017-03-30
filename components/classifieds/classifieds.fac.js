@@ -1,11 +1,10 @@
 app.factory("classifiedsFactory", function($http, $firebaseArray) {
 		
   var config = {
-    databaseURL: "https://ngclassified-3aad3.firebaseio.com",
+    databaseURL: __env.firebaseUrl,
   };
 
   firebase.initializeApp(config);
-
 	var ref = firebase.database().ref()
 
 	return {
